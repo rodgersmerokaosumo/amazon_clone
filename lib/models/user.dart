@@ -1,14 +1,6 @@
 import 'dart:convert';
 
 class User {
-  final String id;
-  final String name;
-  final String email;
-  final String password;
-  final String address;
-  final String type;
-  final String token;
-
   User({
     required this.id,
     required this.name,
@@ -18,18 +10,6 @@ class User {
     required this.type,
     required this.token,
   });
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'email': email,
-      'password': password,
-      'address': address,
-      'type': type,
-      'token': token,
-    };
-  }
 
   factory User.fromMap(Map<String, dynamic> map) {
     return User(
@@ -41,6 +21,26 @@ class User {
       type: map['type'] ?? '',
       token: map['token'] ?? '',
     );
+  }
+
+  final String address;
+  final String email;
+  final String id;
+  final String name;
+  final String password;
+  final String token;
+  final String type;
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+      'password': password,
+      'address': address,
+      'type': type,
+      'token': token,
+    };
   }
 
   String toJson() => json.encode(toMap());
