@@ -1,5 +1,8 @@
+// ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+
+String uri = 'http://192.168.231.228:3001';
 
 class GlobalVariables {
   //colors

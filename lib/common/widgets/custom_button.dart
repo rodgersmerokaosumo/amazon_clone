@@ -13,6 +13,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onTap,
+      // ignore: sort_child_properties_last
       child: Text(
         text,
       ),
